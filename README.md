@@ -10,7 +10,7 @@
 Raise The Terrain is a voluntary project at Holberton School taking part of the "Low-level programming & Algorithm" projects.\
 It is created using the **C programming Language** and **SDL2**.
 ## How it works
- - The program reads the file "matrix points".
+ - The program reads the file "demo_".
  - Gets the coordinate of each point.
  - Draws an isometric projection of a matrix(grid) (64 connected points). Each point has its x, y and z coordinates (z = altitude).
  - Rotates the grid to Right or Left, and UP or DOWN, all this when the user presses on WASD, key.
