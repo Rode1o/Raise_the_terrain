@@ -64,7 +64,6 @@ int start_matrix(RTT_data ***dataref, FILE *fp,
 
 /**
  * draw_matrix - draw a matrix
- *
  * @data: matrix to draw
  * @_renderer: renderer to use
  *

@@ -6,7 +6,7 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: 1 on usage error, -1 on init errors, 0 on success
+ * Return: 0 on success,1 on usage error, -1 on init errors
  */
 int main(int argc, char *argv[])
 {

@@ -71,15 +71,14 @@ int open_terrain(SDL_Renderer *_renderer, RTT_data **data,
 
 /**
  * update_matrix - calculates the matrix coordinates
- *
- * @data: matrix to calculate
- * @zoom: zoom for matrix
  * @flipyz: rotation around yz axis
  * @flipxy: rotation around xy axis
  * @midx: x point in center
  * @midy: y point in center
  * @width: width of matrix
  * @height: height of matrix
+ * @data: matrix to calculate
+ * @zoom: zoom for matrix
  *
  *Return: nothing
  */
