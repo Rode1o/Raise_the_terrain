@@ -85,23 +85,23 @@ int open_terrain(SDL_Renderer *_renderer, RTT_data **data,
 void update_matrix(RTT_data **data, int zoom, float flipyz,
 		    float flipxy, int midx, int midy, int width, int height)
 {
-	int x, y = 0;
+	int row, column = 0;
 	float initx, inity;
 
-	while (data[y] != NULL)
+	while (data[column] != NULL)
 	{
-		while (!data[y][x].next)
+		while (!data[column][row].next)
 		{
-			initx = zoom * (x + 1 - width / 2.0);
-			inity = zoom * (y + 1 - height / 2.0);
-			data[y][x].x = (initx * cos(flipxy) - inity *  sin(flipxy)) + midx;
+			initx = zoom * (row + 1 - width / 2.0);
+			inity = zoom * (column + 1 - height / 2.0);
+			data[column][row].x = (initx * cos(flipxy) - inity *  sin(flipxy)) + midx;
 			inity = inity * cos(flipxy) + initx * sin(flipxy);
-			data[y][x].y = ((inity * cos(flipyz) +
-					 data[y][x].z * zoom / SCALE * sin(flipyz)) + midy);
-			x++;
+			data[column][row].y = ((inity * cos(flipyz) +
+					 data[column][row].z * zoom / SCALE * sin(flipyz)) + midy);
+			row++;
 		}
-		y++;
-		x = 0;
+		column++;
+		row = 0;
 	}
 }
 
