@@ -70,7 +70,7 @@ int open_terrain(SDL_Renderer *_renderer, RTT_data **data,
 
 
 /**
- * update_matrix - calculates the matrix coordinates
+ * update_matrix - Handle the rotation and zoom
  * @flipyz: rotation around yz axis
  * @flipxy: rotation around xy axis
  * @midx: x point in center
@@ -92,8 +92,8 @@ void update_matrix(RTT_data **data, int zoom, float flipyz,
 	{
 		while (!data[y][x].next)
 		{
-			initx = zoom * (x + 1 - width / 2.2);
-			inity = zoom * (y + 1 - height / 2.5);
+			initx = zoom * (x + 1 - width / 2.0);
+			inity = zoom * (y + 1 - height / 2.0);
 			data[y][x].x = (initx * cos(flipxy) - inity *  sin(flipxy)) + midx;
 			inity = inity * cos(flipxy) + initx * sin(flipxy);
 			data[y][x].y = ((inity * cos(flipyz) +
